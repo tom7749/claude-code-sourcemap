@@ -14,6 +14,37 @@
 
 本仓库通过 npm 发布包（`@anthropic-ai/claude-code`）内附带的 source map（`cli.js.map`）还原的 TypeScript 源码，版本为 `2.1.88`。
 
+## ⬇️ 下载方式 / How to Download
+
+### 方式一：浏览器直接下载（推荐 / Recommended）
+
+点击页面右上角绿色 **Code** 按钮 → 选择 **Download ZIP** 即可下载完整压缩包（约 77 MB）。
+
+> ✅ 无需任何额外工具，解压后即可使用，与本地克隆内容完全一致。
+
+---
+
+### 方式二：Git 克隆（完整版含历史记录）
+
+本仓库包含超过 30 MB 的大文件（`claude-code-2.1.88.tgz`），使用 **Git LFS** 存储。
+普通 `git clone` **只会下载文件指针**，需要以下步骤才能获取完整文件：
+
+```bash
+# 第一步：安装 Git LFS（仅首次需要）
+git lfs install
+
+# 第二步：克隆仓库
+git clone https://github.com/tom7749/claude-code-sourcemap.git
+
+# 第三步：拉取 LFS 大文件（核心步骤！）
+cd claude-code-sourcemap
+git lfs pull
+```
+
+> ⚠️ 如果跳过 `git lfs pull`，`claude-code-2.1.88.tgz` 文件将只有几百字节（指针文件），而非真实内容。
+
+---
+
 ## 来源
 
 - npm 包：[@anthropic-ai/claude-code](https://www.npmjs.com/package/@anthropic-ai/claude-code)
